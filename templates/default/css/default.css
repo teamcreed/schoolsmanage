@@ -1,0 +1,137 @@
+/*
+Copyright (C) 2015 Divergente Soluciones
+
+Aplicacion destinada a la gention y control de unidades educativas
+Desarrollada por un grupo de emprendedores 100% Venezolanos,
+desarrollada en Maracay Estado Aragua
+
+*/
+/* 
+    Created on : 06/05/2015, 06/05/2015 12:48:56 PM
+    Author     : Cecilio Morales
+*/
+.paginacion{
+    color: #666666 !important;
+}
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+.typeahead-devs, .tt-hint,.autocompleta  {
+    border: 2px solid #CCCCCC;
+    border-radius: 8px 8px 8px 8px;
+    height: 100%;
+    width: 100%;
+}
+.dato:nth-child(odd){
+    display:none;
+}
+.errorReq{
+    background: #EC7063 !important;
+    color: #fff !important;
+}
+.errorReq::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:    #000;
+}
+.errorReq:-moz-placeholder, textarea:-moz-placeholder { 
+    color:    #000;
+}
+.errorReq::-moz-placeholder, textarea::-moz-placeholder { 
+    color:    #000;
+}
+.errorReq:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:    #000;
+}
+body,html{
+    height: 100%;
+    margin:0px;
+    padding:0px;
+}
+.oculto{
+    display:none;
+}
+.item{
+    cursor: pointer;
+}
+.formirrestricto{
+    max-width:900px !important;
+}
+.row{
+    margin: .3em auto .3em auto !important;
+}
+.item:hover {
+    background-color: #eee !important;
+}
+.detalles{
+    font-size: 1em !important;
+}
+.detalles .negrita{
+    font-weight: bold !important;
+}
+.item:nth-child(odd) {
+   background-color: #ccc;
+}
+.linkemerald{
+    color: #fff !important;
+    cursor: pointer;
+}
+.agregar{
+    cursor: pointer;
+}
+
+.boton{
+    width: 70%;
+    max-width: 350px;
+}
+.requerido{
+    font-size: 12px;
+    color:#EC7063;
+    font-weight: bold;
+}
+
+.panel-default{
+    margin-top: 1em !important;
+    width: 100%;
+}
+#formulario .contenedor{
+    max-width: 600px !important;
+}
+.centrado {
+    margin: 0 auto;
+}
+.filtros{
+    max-width: 800px;
+}
+div.growlUI { 
+    background: url(../img/icons/png/Retina-Ready.png) no-repeat 5px 5px;
+    background-size: auto 80%;
+}
+div.growlUI h1{
+    font-size: 16px !important;
+}
+.bootstrap-tagsinput{
+    margin-bottom:-11px !important;
+    border-color:#BDC3C7;
+    
+}
+.bootstrap-tagsinput .tag > span{
+    padding-left: 10px !important;
+}
+
+div.growlUI h2{
+    font-size: 14px !important;
+}
+div.growlUI h1, div.growlUI h2 {
+    color: white; padding: 5px 5px 5px 75px; text-align: left;
+    margin: 0px;
+}

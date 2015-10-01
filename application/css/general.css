@@ -1,0 +1,110 @@
+body{
+    background-color: #338ec4;
+}
+.panelcontent{
+    
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    overflow: none;
+    
+}
+.panelizquierdo{
+    float: left;
+    border-bottom-right-radius: 10px;
+    margin-left: 10px;
+    border-top-right-radius: 10px;
+    background-color: #fff;
+}
+.panelizquierdo .contenidopanel{ 
+    margin: 0px;
+}
+#menulateral ul{
+    list-style:none;
+    width:100%;
+    padding:0px;
+}
+.dropdown ul{
+    display: none;
+}
+.dropdown li:first-child{
+     border-top-right-radius: 0px !important;
+}
+.dropdown li:last-child{
+     border-bottom-right-radius: 0px !important;
+}
+.dropdown ul div{
+    font-size: 14px !important;
+}
+.dropdown ul li{
+    background-color: #34495E !important;
+}
+.dropdown ul li span:first-child{
+    margin-left: 20px !important;
+}
+.dropdown .fui-triangle-down-small {
+    float: right !important;
+    position: relative !important;
+    right: 10px !important;
+} 
+#accordion li:first-child {
+    border-top-right-radius: 10px;
+}
+#accordion .glyphicon{
+    margin-right: 5px;
+}
+#accordion li:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-color: transparent;
+} 
+#accordion li{
+    margin-left:0px;
+    cursor: pointer;
+    background-color:#34495E;
+}
+#formulario{
+    padding: 0px !important; 
+}
+#accordion li:hover, .dropdown ul li:hover, #accordion .active, .activo{
+    background-color:#5cb85c !important;
+}
+#menulateral ul div{
+    color:#fff;
+    font-size: 16px;
+    padding: 10px 5px 10px 5px;
+    border-bottom: 1px solid #2a6496;
+}
+.panelderecho .contenidopanel{
+    margin: 10px 10px 5px 10px;
+    
+}
+.controlesmod .bot, .modal-body .row div{
+    padding-left: 0px !important;
+    
+}
+.modal-body .col-lg-2{
+    height: 0px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.controlesmod .btn{
+    font-size: 14px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+.panelderecho{
+    border: solid 1px #cecece;
+    background-color: #fff;
+    margin-right: 10px;
+    float: right;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: auto !important;
+}
+.dialog-lg{
+    width: 800px;
+}
+#listado{
+    font-size: 14px !important;
+}
+#AddRep{
+    font-size:12px !important;
+}
