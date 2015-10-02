@@ -109,6 +109,9 @@ body,html{
 .centrado {
     margin: 0 auto;
 }
+.oculto{
+    display:none;
+}
 .filtros{
     max-width: 800px;
 }
@@ -134,4 +137,49 @@ div.growlUI h2{
 div.growlUI h1, div.growlUI h2 {
     color: white; padding: 5px 5px 5px 75px; text-align: left;
     margin: 0px;
+}
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.tag.label.label-info {
+    margin-left: 8px;
+}
+.spinnerbot.active {
+  cursor:progress;
+  background-color: #cecece !important;
+}
+.spinnerbot.active span {
+    text-shadow: 0 1px 1px #fff!important;
+    color: #666666;
 }

@@ -1,8 +1,7 @@
-var Uchip;
+
 
 $( document ).ready(function() {
     autoCompleta('#represe','index.php?com=estudiantes&ajax=true&task=autocompleterep&query=%QUERY','#repid');
-    
     var wsize = $(window).width()-60;
     var widthBot = wsize*0.25;
     $('#botonera').width(widthBot);

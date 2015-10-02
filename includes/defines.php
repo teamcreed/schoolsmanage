@@ -22,4 +22,5 @@ define('SEARCHITEM','searchitem');
 define('ADDITEM','additem');
 define('DETAILITEM', 'detailitem');
 define('DELETEITEM', 'deleteitem');
+define('EDITITEM', 'edititem');
 ?>

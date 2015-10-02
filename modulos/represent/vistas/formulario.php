@@ -9,7 +9,7 @@
  *
  */
 ?>
-<div class="oculto " id="formulario">
+<div id="formrep">
     <form action="index.php?com=represent&task=mkrepresent&ajax=true" method="post" id="mkrepresent" class="manejaform" callback="mkrepresent">
         <div class="centrado contenedor">
             <div class="form-group">

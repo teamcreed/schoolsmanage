@@ -31,7 +31,7 @@ class Componente{
     public $listado;
     public $formulario;
     public $controles;
-    function __construct($uchip,$actor,$ruta,$tabla,$vistas,$pantalla='pantalla.php',$listado='listado.php',$formulario='formulario.php'){
+    function __construct($uchip,$actor,$ruta,$tabla,$vistas='vistas',$pantalla='pantalla.php',$listado='listado.php',$formulario='formulario.php'){
         $this->uchip=$uchip;
         $this->actor=$actor;
         $this->ruta=$ruta;

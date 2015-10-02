@@ -11,6 +11,7 @@
 //$this->formulario();
 $this->addControl(new Controles('Buscar', 'fui-search', '', 'btn-lg btn-primary '.SEARCHITEM,'',true));
 $this->addControl(new Controles('Agregar', 'fui-new', '', 'btn-lg btn-info '.ADDITEM,'',true));
+$this->addControl(new Controles('Editar', 'glyphicon glyphicon-edit', '', 'btn-lg btn-info '.EDITITEM,'',true));
 $this->addControl(new Controles('Ver detalles', 'glyphicon glyphicon-zoom-in', '', 'btn-lg btn-inverse '.DETAILITEM,'',true));
 $this->addControl(new Controles('Eliminar', 'fui-trash', '', 'btn-lg btn-warning '.DELETEITEM,'',true));
 ?>

@@ -8,6 +8,7 @@
  */
 var formatoFecha='DD/MM/YYYY';
 var ConfirmarInstancia;
+var Uchip;
 function replaceAll(find, replace, str) {
     return str.replace(new RegExp(find, 'g'), replace);
 }
@@ -173,11 +174,6 @@ function autocompletaTags(elemento,url,depende){
         $(this).tagsinput('destroy');
     });
 }
-
-
-
-
-
 (function( $ ) {
     $.fn.validar = function( options ) {
         var settings = $.extend({
@@ -228,6 +224,7 @@ function autocompletaTags(elemento,url,depende){
         };
         return this.initialize();
         function validarForm(form){
+            settings.errores = '';
             var contador=0;
             form.find(':input').each(function() {
                 if($(this).attr('requerido')=='true' && empty($(this).val())){

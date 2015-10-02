@@ -101,6 +101,24 @@ class Estudiantes extends Componente{
         echo SEPARADOR;
         $this->verListado();
     }
+    private function edit(){
+        $cols="estudiantes.id,
+        estudiantes.nombre,
+        estudiantes.apellido,
+        estudiantes.curso,
+        estudiantes.st,
+        estudiantes.representante,
+        DATE_FORMAT(estudiantes.nacimiento,'%d/%m/%Y') AS Nacimiento,
+        estudiantes.tiposangre,
+        CONCAT(representantes.nombre,' ',representantes.apellido,' (',representantes.cedula,')') AS REP";
+        $from="estudiantes
+        INNER JOIN representantes ON estudiantes.representante = representantes.id";
+        $where['estudiantes.id']=$_REQUEST[id];
+        $alumno=$this->uchip->db->select($from,$where,'','','','',$cols);
+        $alumno=$alumno[0];
+        $edit=true;
+        include ($this->formulario);
+    }
     public function Router(){
         switch($_REQUEST[task]){
             case 'insertar':
@@ -111,6 +129,9 @@ class Estudiantes extends Componente{
                 break;
             case 'formulario':
                 $this->formulario();
+                break;
+            case 'formularioedit':
+                $this->edit();
                 break;
             case 'autocompleterep':
                 $this->func->Autocompletar('representantes');

@@ -25,7 +25,9 @@ $framework = $this->uchip;
     </div>
     <div id="contenido" class="panelcontent panelderecho">
         <div class="contenidopanel">
-             <input type="text" class="form-control typeahead" depende="#repid" placeholder="Nombre del representante..." name="representante" id="represe" />
+             <div id="AddRep" class="btn btn-block btn-inverse ">
+                    
+                </div>
         </div>
     </div>
 </div>

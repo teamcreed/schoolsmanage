@@ -10,20 +10,3 @@
  */
 
 require_once 'helpers'.DS.'representantes.php';
-switch($_REQUEST[task]){
-    case 'mkrepresent':
-        $representante->mkrepresent();
-        break;
-    case 'listado':
-        $representante->verListado();
-        break;
-    case 'addauto':
-        $representante->addauto();
-        break;
-    case 'detalles':
-        $representante->detalles();
-        break;
-    default:
-        $representante->principal();
-        break;
-}

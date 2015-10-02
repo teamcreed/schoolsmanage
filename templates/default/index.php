@@ -33,6 +33,7 @@ defined('_UCHIP') or die;
         
         <script src="<?=$this->ruta?>/js/vendor/jquery.min.js"></script>
         <script src="<?=$this->ruta?>/js/uchip.js"></script>
+        <script src="<?=$this->ruta?>/js/spinner.js"></script>
         <script src="<?=$this->ruta?>/js/vendor/video.js"></script>
         <script src="<?=$this->ruta?>/js/application.js"></script>
         <script src="<?=$this->ruta?>/js/flat-ui.min.js"></script>
@@ -46,7 +47,7 @@ defined('_UCHIP') or die;
         <script src="<?=$this->ruta?>/js/moment.js"></script>
         <script src="<?=$this->ruta?>/js/bootstrap-datetimepicker.min.js"></script>
         <script src="<?=$this->ruta?>/js/localeEs.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/js/bootstrap-dialog.min.js"></script>
+        <script src="<?=$this->ruta?>/js/bootstrap-dialog.js"></script>
         <script src="<?=$this->ruta?>/js/ui.js"></script>
         <script src="<?=$this->ruta?>/js/datepicker.js"></script>
         <script>

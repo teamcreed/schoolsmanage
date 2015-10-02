@@ -9,25 +9,11 @@
  *
  */
 
-
-class Representante{
+sleep(1);
+class Representante extends Componente{
     public $uchip;
     public $func;
     public $actor;
-    function __construct($uchip){
-        $this->uchip=$uchip;
-        $this->actor="representantes";
-        $this->func = new Funciones($uchip->db);
-    }
-    public function principal(){
-        include (MODSDIR.'represent'.DS.'vistas'.DS.'pantalla.php');
-    }
-    public function listado($representantes){
-        include (MODSDIR.'represent'.DS.'vistas'.DS.'listado.php');
-    }
-    public function formulario(){
-        include (MODSDIR.'represent'.DS.'vistas'.DS.'formulario.php');
-    }
     public function mkrepresent(){
         $data[nombre]=$_REQUEST[nombre];
         $data[apellido]=$_REQUEST[apellido];
@@ -84,6 +70,34 @@ class Representante{
         $this->listado($representantes);
         $this->uchip->template->paginado($totales,$pagina,'index.php?com=represent&task=listado');
     }
+    public function router(){
+        switch($_REQUEST[task]){
+            case 'mkrepresent':
+                $this->mkrepresent();
+                break;
+            case 'listado':
+                $this->verListado();
+                break;
+            case 'addauto':
+                $this->addauto();
+                break;
+            case 'test':
+                $arr[id]=2;
+                $arr[value]="Perico de los palotes";
+                echo json_encode($arr);
+                break;
+            case 'addform':
+                $this->formulario();
+                break;
+            case 'detalles':
+                $this->detalles();
+                break;
+            default:
+                $this->principal();
+                break;
+        }
+    }
 }
-$representante = new Representante($this->uchip);
+$representante = new Representante($this->uchip,'representantes','represent','representantes');
+$representante->router();
 ?>

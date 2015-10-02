@@ -3,6 +3,7 @@
     $.Uchip = function () {
         this.item = '';
         this.formitem = '';
+        this.activeDialog = '';
     };
     $.Uchip.prototype = {
         alertar: function(mensaje,titulo){
@@ -13,6 +14,22 @@
                 message: mensaje,
                 cssClass: 'login-dialog'
             });
+        },
+        toggleDiv: function(quita,pon,callback){
+            $(quita).slideUp(500,function(){
+                $(pon).slideDown(500,function(){
+                    if( typeof callback == "function" )
+                        callback();
+                });
+            });
+        },
+        disableDialog: function(dialog){
+            dialog.enableButtons(false);
+            dialog.setClosable(false);
+        },
+        enableDialog: function(dialog){
+            dialog.enableButtons(true);
+            dialog.setClosable(true);
         },
         makeurl: function(url){
             return url+'&ajax=true';
@@ -73,7 +90,7 @@
             var $textAndPic = $('<div></div>');
             $textAndPic.append(html);
             var binder = $textAndPic.find('.manejaform').attr('binder');
-            BootstrapDialog.show({
+            Uchip.activeDialog = new BootstrapDialog({
                 title: 'Añadir',
                 message: $textAndPic,
                 size: BootstrapDialog.SIZE_WIDE,
@@ -86,8 +103,9 @@
                         eval(binder+"();");
                 },
                 buttons: [{
-                    icon: 'glyphicon glyphicon-hdd',
+                    icon: 'glyphicon glyphicon-floppy-disk',
                     label: 'Guardar',
+                    id: 'buttonAdd',
                     cssClass: 'btn-primary',
                     action: function(dialogRef){
                         /*dialogRef.enableButtons(false);
@@ -100,18 +118,19 @@
                             //$button.disable();
                             this.spin();
                             Uchip.formitem.send()
-                            Uchip.formitem=dialogRef;
                         }
                         //forminsert.saludar();
                     }
                 }, {
-                    label: 'Close',
+                    icon: 'glyphicon glyphicon-remove-circle',
+                    label: 'Cerrar',
                     action: function(dialogRef){
                         dialogRef.close();
                     },
                     cssClass: 'btn-warning'
                 }]
             });
+            Uchip.activeDialog.open();
         },
         BindRepSuggest: function(elemento,url,depende){
             $(elemento).typeahead({
@@ -163,6 +182,15 @@
                 Uchip.Asincrono(base+'&task=formulario&ajax=true',function(response){
                     Uchip.DialogNewItem(response);
                 });
+            });
+            $('.bindable .edititem').click(function(){
+                if(!Uchip.empty(Uchip.item)){
+                    Uchip.Asincrono(base+'&task=formularioedit&id='+ Uchip.item + '&ajax=true',function(response){
+                        Uchip.DialogNewItem(response);
+                    });
+                }else{
+                    Uchip.alertar("Debe seleccionar un item para poder continuar.");
+                }
             });
             $('.bindable .detailitem').click(function(){
                 if(!Uchip.empty(Uchip.item)){
